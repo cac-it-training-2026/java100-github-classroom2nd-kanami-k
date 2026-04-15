@@ -28,6 +28,46 @@
 
 package lesson01.challenge04;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 public class Patisserie {
+	public static void main(String[] args) throws IOException {
+		int cake1 = 30;
+		int cake2 = 30;
+		int cake3 = 30;
+		System.out.println("たいへんお待たせしました。");
+		System.out.println("【ポエール・ネルメ】");
+		System.out.println("ただいまより開店です！！");
+
+		System.out.println("\n本日のおすすめ商品です。\n");
+		System.out.println("シトロン      \\250・・・残り" + cake1 + "個");
+		System.out.println("ショコラ      \\280・・・残り" + cake2 + "個");
+		System.out.println("ピスターシュ  \\320・・・残り" + cake3 + "個");
+
+		System.out.println("それぞれ何個ずつ買いますか？（最大30個まで）");
+
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("シトロン　　＞");
+		String cake1count = br.readLine();
+		int cake1buy = Integer.parseInt(cake1count);
+		System.out.println("シトロン" + cake1buy + "個");
+
+		System.out.println("ショコラ　　＞");
+		String cake2count = br.readLine();
+		int cake2buy = Integer.parseInt(cake2count);
+		System.out.println("ショコラ" + cake2buy + "個");
+
+		System.out.println("ピスターシュ　　＞");
+		String cake3count = br.readLine();
+		int cake3buy = Integer.parseInt(cake3count);
+		System.out.println("ピスターシュ" + cake3buy + "個");
+
+		System.out.println("\nをお買いあげですね。");
+		System.out.println("承りました。");
+
+	}
 
 }
