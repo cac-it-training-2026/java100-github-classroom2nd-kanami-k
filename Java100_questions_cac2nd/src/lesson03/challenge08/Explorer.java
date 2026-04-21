@@ -51,7 +51,6 @@ package lesson03.challenge08;
 public class Explorer {
 
 	public static void main(String[] args) {
-
 		System.out.println("隊長：");
 		System.out.println("洞窟の入り口発見！\n");
 		System.out.println("早速石版を見てみるよ。\n");
@@ -59,17 +58,31 @@ public class Explorer {
 		int lithograph = 0;
 		int i = 0;
 
-
 		//ここにdo～while文、if文を利用した処理を記述
+		do {
+			lithograph = (int) (Math.random() * 10 % 10);
 
+			if (lithograph == 3) {
+				System.err.println("隊長：");
+				System.out.println("やったー！３がでたよ");
+				break;
+			} else if (1 != 6) {
+				System.out.println("隊長：");
+				System.out.println(lithograph + "だった…");
+				System.out.println("1時間待つよ（" + i + ")時間経過");
 
+			}
+			i++;
+		} while (i <= 6);
 		if (lithograph == 3) {
 			System.out.println("洞窟の入り口が開きました。");
 		} else {
 			System.out.println("隊長：");
-			System.out.println(lithograph + "だった...（" + (i - 1)+ "時間経過）");
+			System.out.println(lithograph + "だった...（" + (i - 1) + "時間経過）");
 			System.out.println("あの時サバ缶に手を付けていなければ...");
 			System.out.println("探検隊は全滅しました。");
+
 		}
+
 	}
 }
